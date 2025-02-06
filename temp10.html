@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function f1(){
+            let v=document.getElementById("marks").value;
+            if(v>90 && v<=100){
+                msg.innerHTML="Grade A-10 GPA";
+            }else if(v>80 && v<=90){
+                msg.innerHTML="Grade A-9 GPA";
+            }else if(v>70 && v<=80){
+                msg.innerHTML="Grade B-8 GPA";
+            }else if(v>60 && v<=70){
+                msg.innerHTML="Grade B-7 GPA";
+            }else if(v>50 && v<=60){
+                msg.innerHTML="Grade C-6 GPA";
+            }else if(v>34 && v<=50){
+                msg.innerHTML="Grade D-5 GPA";
+            }else{
+                msg.innerHTML="FAIL-Better Luck Next Time!!!"
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id="marks" placeholder="Enter Score">
+    <button onclick="f1()">Submit</button>
+    <hr>
+    <div id="msg"></div>
+</body>
+</html>

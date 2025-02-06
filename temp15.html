@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            
+            .container{
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                background-color: white;
+                
+            }
+            .box{
+                border: 2px solid rgb(21, 17, 99);
+                width: 400px;
+                height: 250px;
+                background-color:white;
+                border-radius: 30px;
+                padding: 70px;
+                
+            }
+            button{
+                width: 100%;
+                background-color: rgb(13, 13, 71);
+                color: white;
+                padding: 20px;
+                border-radius: 20px;
+                font-size: large;
+                border: rgb(17, 17, 85);
+            }
+            input{
+                width: 90%;
+                padding: 20px;
+            
+            }
+            h1{
+            font-style: normal;
+            font-size: small; 
+            }
+        </style>
+        <script>
+        function  calc(){
+                let n1=Number(document.getElementById("num1").value)
+                let n2=Number(document.getElementById("num2").value)
+                let str=`${n1}+${n2}=${n1+n2}<br>`;
+                if(n1==""||n2==""){
+                    msg.innerHTML="Enter the numbers"
+                }else{
+                    str=str+`${n1}-${n2}=${n1-n2}<br>`;
+                    str=str+`${n1}*${n2}=${n1*n2}<br>`;
+                    str= str+`${n1}/${n2}=${n1/n2}<br>`;
+                    d1.innerHTML=str;
+                    // add.innerHTML=` ${n1}+${n2}=${n1+n2} `
+                    // sub.innerHTML=` ${n1}-${n2}=${n1-n2} `
+                    // mul.innerHTML=` ${n1}*${n2}=${n1*n2} `
+                    // divd.innerHTML=` ${n1}/${n2}=${n1/n2} `
+                    
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <p><div id="msg"></div></p>
+        <p><div id="d1"></div></p>
+        <!-- <p><div id="sub"></div></p>
+        <p><div id="mul"></div></p>
+        <p><div id="divd"></div></p> -->
+        <div class="container"> 
+            <div class="box">
+    <p> <input type="number" id="num1" placeholder="enter num1"></p>
+    <p> <input type="number"id="num2"placeholder="enter num2"></p>
+        <button onclick="calc()">EVALUATE</button>
+    </div>
+
+    </body>
+</html>

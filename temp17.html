@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN FORM</title>
+    <style>
+        
+        .container{
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            background-color: white;
+            
+        }
+        .box{
+            border: 2px solid rgb(4, 3, 17);
+            width: 300px;
+            height: 200px;
+            background-color:white;
+            border-radius: 10px;
+            padding: 50px;
+            
+        }
+        button{
+            width: 100%;
+            background-color: rgb(1, 1, 5);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: large;
+            border: rgb(4, 4, 10);
+        }
+        input{
+            width: 90%;
+            padding: 20px;
+           
+        }
+        h1{
+           font-style: normal;
+           font-size: small; 
+        }
+    </style>
+    <script>
+        function  showdata(){
+            let Email=document.getElementById("mail").value
+            let pswd=document.getElementById("pwd").value
+            if(Email==""||pswd==""){
+                msg.innerHTML="Enter the Details !"
+            }else{
+                d1.innerHTML=`${Email},${pswd}`
+                
+            }
+        }
+    </script>
+</head>
+<body>
+    <p><div id="msg"></div></p>
+    <p><div id="d1"></div></p>
+    <div class="container"> 
+        <div class="box">
+   <p> <input type="email" id="mail" placeholder="Enter Email"></p>
+   <p> <input type="password"id="pwd"placeholder="Enter Password"></p>
+    <button onclick="showdata()">LOGIN</button>
+</div>
+
+</body>
+</html>
